@@ -72,6 +72,7 @@ class YandexAdFoxViewManager: NSObject, YMANativeAdLoaderDelegate, YMANativeAdDe
             let nativeImageView = UIImageView(frame: parentContentView.frame)
             nativeImageAdView = YMANativeImageAdView(frame: parentContentView.frame)
             nativeImageAdView.imageView = nativeImageView
+            nativeImageAdView.addSubview(nativeImageView)
             
             do {
                 try nativeImageAd.bindImageAd(to: nativeImageAdView, delegate: self)
